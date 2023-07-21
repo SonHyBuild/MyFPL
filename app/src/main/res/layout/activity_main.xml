@@ -4,11 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    >
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="wrap_content"
+        android:id="@+id/f1"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+    </androidx.fragment.app.FragmentContainerView>
+    <FrameLayout
+        android:id="@+id/frame1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        android:layout_weight="1"></FrameLayout>
 </LinearLayout>
