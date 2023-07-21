@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECE9E6">
+    android:background="#FFBF69">
 
     <EditText
         android:id="@+id/edtSearch"
@@ -12,17 +12,18 @@
         android:layout_height="45dp"
         android:layout_marginBottom="372dp"
         android:background="@drawable/edtform"
+        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/search"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:paddingLeft="8dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.127" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -60,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa"
+                    android:text="MOB403"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -69,13 +70,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Ca3 - 19-07-2023" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="T303 (Nhà T)" />
 
             </LinearLayout>
 
@@ -88,16 +89,14 @@
         android:id="@+id/cardView2"
         android:layout_width="375dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="408dp"
         android:background="@color/white"
         android:orientation="vertical"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintVertical_bias="0.025">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa"
+                    android:text="MOB402"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -130,13 +129,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Ca6 - 21-07-2023" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="T311 (Nhà T)" />
 
             </LinearLayout>
 
@@ -182,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa"
+                    android:text="MOB345"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -191,13 +190,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Ca1 - 22-07-2023" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="T1011 (Nhà T)" />
 
             </LinearLayout>
 
@@ -243,7 +242,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa"
+                    android:text="MOB253"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -252,13 +251,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Ca2 - 25-07-2023" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="T1111 (Nhà T)" />
 
             </LinearLayout>
 
@@ -304,7 +303,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa"
+                    android:text="MOB735"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -313,13 +312,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Ca5 - 27-07-2023" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="T1010 (Nhà T)" />
 
             </LinearLayout>
 
@@ -327,18 +326,6 @@
 
 
     </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/apple"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
