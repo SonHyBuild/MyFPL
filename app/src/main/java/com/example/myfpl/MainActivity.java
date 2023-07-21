@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.example.myfpl.activity.FormFragment;
+import com.example.myfpl.activity.XuongFragment;
 import com.example.myfpl.adapter.LoaiNhaAdapter;
 import com.example.myfpl.fragment.CoursesFragment;
 import com.example.myfpl.model.LoaiNha;
@@ -34,15 +36,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        replaceFragment(new CoursesFragment());
+        replaceFragment(new XuongFragment());
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new XuongFragment());
                     break;
                 case R.id.course:
+                    replaceFragment(new XuongFragment());
                     break;
                 case R.id.profile:
+                    replaceFragment(new CoursesFragment());
                     break;
             }
 
