@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="10dp"
+    >
+
+    <LinearLayout
+        android:padding="20dp"
+        android:background="@drawable/boder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/txtCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xưởng thực hành"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+        <TextView
+            android:textSize="18dp"
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thời gian: Học kỳ summer 2023"/>
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:textSize="18dp"
+            android:id="@+id/txtObject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đối tượng: Sinh viên kỳ 5, 6 ngành LTMT"/>
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:textSize="18dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Không yêu cầu kinh nghiệm sẽ có người hướng dẫn cụ thể"/>
+
+        <TextView
+            android:textSize="18dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký ngay"
+            android:textColor="#e63946"
+            android:textAlignment="textEnd"/>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
