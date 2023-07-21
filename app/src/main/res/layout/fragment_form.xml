@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECE9E6">
+    android:background="#ECE9E6"
+    >
 
 
     <androidx.cardview.widget.CardView
@@ -42,8 +43,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="aaaaaaaaaa"
+                    android:text="CLB LOL"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -51,14 +51,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Học kỳ summer 2023" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="aaaaaaaaaa" />
+                    android:text="Sinh viên kỳ 5, 6 ngành LTMT" />
 
             </LinearLayout>
 
@@ -75,7 +73,7 @@
             android:layout_weight="1"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            android:text="Không yêu cầu kinh nghiệm sẽ có người hướng dẫn cụ thể"
             android:textSize="25dp" />
 
     </androidx.cardview.widget.CardView>

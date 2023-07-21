@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.example.myfpl.activity.FormFragment;
+import com.example.myfpl.activity.XuongFragment;
 import com.example.myfpl.adapter.LoaiNhaAdapter;
 import com.example.myfpl.fragment.CoursesFragment;
 import com.example.myfpl.model.LoaiNha;
@@ -41,8 +43,10 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new CoursesFragment());
                     break;
                 case R.id.course:
+                    replaceFragment(new CoursesFragment());
                     break;
                 case R.id.profile:
+                    replaceFragment(new FormFragment());
                     break;
             }
 
