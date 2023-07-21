@@ -10,4 +10,7 @@
     <item android:title="CLB"
         android:icon="@drawable/ic_person"
         android:id="@+id/profile"/>
+    <item android:title="Notifications"
+        android:icon="@drawable/ic_notifications"
+        android:id="@+id/notification"/>
 </menu>
