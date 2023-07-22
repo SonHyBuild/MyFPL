@@ -16,6 +16,7 @@ import com.example.myfpl.activity.XuongFragment;
 import com.example.myfpl.adapter.LoaiNhaAdapter;
 import com.example.myfpl.fragment.CoursesFragment;
 import com.example.myfpl.fragment.NotificationsFragment;
+import com.example.myfpl.fragment.ThongBaoFragment;
 import com.example.myfpl.model.LoaiNha;
 import com.example.myfpl.services.APIService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
