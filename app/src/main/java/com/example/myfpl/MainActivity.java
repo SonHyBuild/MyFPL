@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new XuongFragment());
                     break;
                 case R.id.course:
+<<<<<<< HEAD
+                    replaceFragment(new CoursesFragment());
+                    break;
+                case R.id.profile:
+                    replaceFragment(new FormFragment());
+=======
                     replaceFragment(new TabFragment());
                     break;
                 case R.id.profile:
@@ -52,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.notification:
                     replaceFragment(new NotificationsFragment());
+>>>>>>> master
                     break;
             }
 
