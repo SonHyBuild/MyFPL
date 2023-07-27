@@ -11,24 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfpl.R;
-import com.example.myfpl.model.Course;
+import com.example.myfpl.fragment.LichHocFragment;
 
-import java.util.ArrayList;
-
-public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHolder> {
+public class LichHocAdapter extends RecyclerView.Adapter<LichHocAdapter.ViewHolder> {
 
     private Context context;
 
-    public CoursesAdapter( Context context) {
+    public LichHocAdapter( Context context) {
 
         this.context = context;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
-        View view = inflater.inflate(R.layout.item_course,parent,false);
+        View view = inflater.inflate(R.layout.item_lich_hoc,parent,false);
         return new ViewHolder(view);
     }
 
@@ -39,16 +36,17 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 6;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView txtCourse,txtTime,txtObject;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView txtMaMH,txtLocationLH,txtCaLH,txtDate_timeLH;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtCourse= itemView.findViewById(R.id.txtCourse);
-            txtTime = itemView.findViewById(R.id.txtTime);
-            txtObject = itemView.findViewById(R.id.txtObject);
+            txtMaMH= itemView.findViewById(R.id.txtMaMH);
+            txtLocationLH = itemView.findViewById(R.id.txtLocationLH);
+            txtCaLH = itemView.findViewById(R.id.txtCaLH);
+            txtDate_timeLH = itemView.findViewById(R.id.txtDate_timeLH);
         }
     }
 }
