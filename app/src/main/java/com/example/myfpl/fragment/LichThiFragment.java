@@ -11,10 +11,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.myfpl.R;
 import com.example.myfpl.adapter.LichHocAdapter;
 import com.example.myfpl.adapter.LichThiAdapter;
+import com.example.myfpl.model.LichHoc;
+import com.example.myfpl.model.LichThi;
+import com.example.myfpl.services.APIService;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class LichThiFragment extends Fragment {
@@ -50,9 +62,32 @@ public class LichThiFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerViewLichThi = view.findViewById(R.id.recyclerViewLichThi);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerViewLichThi.setLayoutManager(linearLayoutManager);
-        LichThiAdapter adapter= new LichThiAdapter(getContext());
-        recyclerViewLichThi.setAdapter(adapter);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(APIService.base_link)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        APIService service = retrofit.create(APIService.class);
+        Call<ArrayList<LichThi>> response = service.GetDSLT();
+        response.enqueue(new Callback<ArrayList<LichThi>>() {
+            @Override
+            public void onResponse(Call<ArrayList<LichThi>> call, Response<ArrayList<LichThi>> response) {
+                ArrayList<LichThi> list = response.body();
+
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+                recyclerViewLichThi.setLayoutManager(linearLayoutManager);
+                LichThiAdapter adapter= new LichThiAdapter(getContext(), list);
+                recyclerViewLichThi.setAdapter(adapter);
+
+                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<LichThi>> call, Throwable t) {
+                Toast.makeText(getContext(), "Không thành công", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 }

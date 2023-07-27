@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/txtMaMH"
+                android:id="@+id/txtNameMH"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:textSize="22dp"
@@ -40,34 +40,54 @@
                 <TextView
                     android:id="@+id/txtLocationLT"
                     android:text="Phòng T308 (Nhà T)"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp"/>
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_marginLeft="50dp"
                     android:src="@drawable/ic_time" />
                 <TextView
                     android:id="@+id/txtCaLT"
                     android:text="Ca 6"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tearcher" />
+
+                <TextView
+                    android:id="@+id/txtTearcherMH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="dinhnt24" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_marginLeft="2dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_date" />
+
                 <TextView
                     android:id="@+id/txtDate_timeLT"
-                    android:text="21/07/2023"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
                     android:layout_marginLeft="2dp"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"/>
+                    android:text="Thứ Tư, 19/07/2023 19:30:00 - 21:30:00" />
             </LinearLayout>
 
 

@@ -2,11 +2,13 @@ package com.example.myfpl.model;
 
 public class LichHoc {
     public Integer idLH,idMH;
-    public String caLH,locationLH,date_timeLH;
+    public String nameMH, tearcherMH, caLH,locationLH,date_timeLH;
 
-    public LichHoc(Integer idLH, Integer idMH, String caLH, String locationLH, String date_timeLH) {
+    public LichHoc(Integer idLH, Integer idMH, String nameMH, String tearcherMH, String caLH, String locationLH, String date_timeLH) {
         this.idLH = idLH;
         this.idMH = idMH;
+        this.nameMH = nameMH;
+        this.tearcherMH = tearcherMH;
         this.caLH = caLH;
         this.locationLH = locationLH;
         this.date_timeLH = date_timeLH;
@@ -26,6 +28,22 @@ public class LichHoc {
 
     public void setIdMH(Integer idMH) {
         this.idMH = idMH;
+    }
+
+    public String getNameMH() {
+        return nameMH;
+    }
+
+    public void setNameMH(String nameMH) {
+        this.nameMH = nameMH;
+    }
+
+    public String getTearcherMH() {
+        return tearcherMH;
+    }
+
+    public void setTearcherMH(String tearcherMH) {
+        this.tearcherMH = tearcherMH;
     }
 
     public String getCaLH() {

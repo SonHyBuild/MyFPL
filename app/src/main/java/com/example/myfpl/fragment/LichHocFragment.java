@@ -11,15 +11,25 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.myfpl.R;
 import com.example.myfpl.adapter.CoursesAdapter;
 import com.example.myfpl.adapter.LichHocAdapter;
+import com.example.myfpl.model.LichHoc;
+import com.example.myfpl.services.APIService;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class LichHocFragment extends Fragment {
-
-    private RecyclerView recyclerViewLichHoc;
+    private  RecyclerView recyclerViewLichHoc ;
     public LichHocFragment() {
         // Required empty public constructor
     }
@@ -50,9 +60,32 @@ public class LichHocFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerViewLichHoc = view.findViewById(R.id.recyclerViewLichHoc);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerViewLichHoc.setLayoutManager(linearLayoutManager);
-        LichHocAdapter adapter= new LichHocAdapter(getContext());
-        recyclerViewLichHoc.setAdapter(adapter);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(APIService.base_link)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        APIService service = retrofit.create(APIService.class);
+        Call<ArrayList<LichHoc>> response = service.GetDSLH();
+        response.enqueue(new Callback<ArrayList<LichHoc>>() {
+            @Override
+            public void onResponse(Call<ArrayList<LichHoc>> call, Response<ArrayList<LichHoc>> response) {
+                ArrayList<LichHoc> list = response.body();
+
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+                recyclerViewLichHoc.setLayoutManager(linearLayoutManager);
+                LichHocAdapter adapter= new LichHocAdapter(getContext(), list);
+                recyclerViewLichHoc.setAdapter(adapter);
+
+                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<LichHoc>> call, Throwable t) {
+                Toast.makeText(getContext(), "Không thành công", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 }
