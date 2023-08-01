@@ -16,7 +16,7 @@ import com.example.myfpl.activity.XuongFragment;
 import com.example.myfpl.adapter.LoaiNhaAdapter;
 import com.example.myfpl.fragment.CoursesFragment;
 import com.example.myfpl.fragment.NotificationsFragment;
-
+import com.example.myfpl.fragment.ThongBaoFragment;
 import com.example.myfpl.model.LoaiNha;
 import com.example.myfpl.services.APIService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         replaceFragment(new XuongFragment());
-        bottomNavigationView.setOnItemSelectedListener( item -> {
+        bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
                     replaceFragment(new XuongFragment());
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new CoursesFragment());
                     break;
                 case R.id.notification:
-                    //replaceFragment(new ThongBaoFragment());
+                    replaceFragment(new ThongBaoFragment());
                     break;
             }
 

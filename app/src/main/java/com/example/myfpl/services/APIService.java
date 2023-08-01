@@ -3,6 +3,7 @@ package com.example.myfpl.services;
 import com.example.myfpl.model.LichHoc;
 import com.example.myfpl.model.LichThi;
 import com.example.myfpl.model.LoaiNha;
+import com.example.myfpl.model.TinTuc;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public interface APIService {
     Call<ArrayList<LoaiNha>> GetDS();
     @GET("Detail.php")
     Call<LoaiNha> GetDetails(@Query("id") int id);
+
     //lay ds lich hoc
     @GET("LichHoc.php")
     Call<ArrayList<LichHoc>> GetDSLH();
@@ -25,4 +27,11 @@ public interface APIService {
     //lay ds lich thi
     @GET("LichThi.php")
     Call<ArrayList<LichThi>> GetDSLT();
+    // get ds tin tức
+    @GET("GetTinTuc.php")
+    Call<ArrayList<TinTuc>> GetDSTT();
+
+
+
+
 }
