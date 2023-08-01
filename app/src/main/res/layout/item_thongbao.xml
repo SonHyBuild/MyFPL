@@ -21,6 +21,8 @@
             android:id="@+id/line1"
             android:layout_width="300dp"
             android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
             android:layout_marginRight="8dp"
             android:orientation="vertical">
 
@@ -29,25 +31,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
+                android:text="adasdasd"
                 android:textColor="#2c3e50"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_lyric"
+                android:id="@+id/tv_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
+                android:text="aaaaa"
                 android:textColor="#34495e"
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/tv_artist"
+                android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#7f8c8d"
+                android:text="bbbb"
                 android:textSize="14dp" />
         </LinearLayout>
+
         <FrameLayout
             android:id="@+id/fl_code"
             android:layout_width="wrap_content"
@@ -56,6 +62,7 @@
             android:layout_centerVertical="true">
 
        <ImageView
+           android:id="@+id/imghinh"
            android:layout_width="100dp"
            android:layout_height="100dp"
            android:src="@drawable/bee"></ImageView>

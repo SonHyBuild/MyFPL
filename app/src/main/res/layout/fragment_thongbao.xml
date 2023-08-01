@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFBF69"
@@ -7,20 +7,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <EditText
-        android:id="@+id/edtSearch"
-        android:layout_width="330dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edtform"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/search"
-        android:ems="10"
-        android:layout_marginBottom="10dp"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="8dp"
-        android:textColor="@color/black" />
+<!--    <EditText-->
+<!--        android:id="@+id/edtSearch"-->
+<!--        android:layout_width="330dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/edtform"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:drawableLeft="@drawable/search"-->
+<!--        android:ems="10"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:paddingLeft="8dp"-->
+<!--        android:textColor="@color/black" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/thongbao"
@@ -29,4 +29,4 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+</RelativeLayout>

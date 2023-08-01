@@ -1,9 +1,10 @@
 package com.example.myfpl.model;
 
 public class TinTuc {
-    private String idNews,title,content,date,hinh;
+    private String title,content,date,hinh;
+    private int idNews;
 
-    public TinTuc(String idNews, String title, String content, String date, String hinh) {
+    public TinTuc(int idNews, String title, String content, String date, String hinh) {
         this.idNews = idNews;
         this.title = title;
         this.content = content;
@@ -11,11 +12,11 @@ public class TinTuc {
         this.hinh = hinh;
     }
 
-    public String getIdNews() {
+    public int getIdNews() {
         return idNews;
     }
 
-    public void setIdNews(String idNews) {
+    public void setIdNews(int idNews) {
         this.idNews = idNews;
     }
 

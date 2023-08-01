@@ -1,9 +1,11 @@
 package com.example.myfpl.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,58 +16,53 @@ import com.example.myfpl.R;
 import com.example.myfpl.model.TinTuc;
 //import com.example.myfpl.model.TinTuc;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.TinTucViewHolder> {
-    private static final String TAG = "SongAdapter";
-    private List<TinTuc> tintuc;
+public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.ViewHolder> {
     private Context context;
-    private LayoutInflater mLayoutInflater;
+    private ArrayList<TinTuc> list;
 
-    public ThongBaoAdapter( Context context, List<TinTuc> tintuc) {
-
+    public ThongBaoAdapter(Context context, ArrayList<TinTuc> list) {
         this.context = context;
-        this.tintuc = tintuc;
-          mLayoutInflater=LayoutInflater.from(context);
+        this.list = list;
     }
-
 
     @NonNull
     @Override
-    public TinTucViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = mLayoutInflater.inflate(R.layout.item_thongbao, parent, false);
-        return new TinTucViewHolder(itemView);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater=((Activity)context).getLayoutInflater();
+        View view=inflater.inflate(R.layout.item_thongbao,parent,false);
 
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TinTucViewHolder holder, int position) {
-        TinTuc tt = tintuc.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.tv_title.setText(list.get(position).getTitle());
+        holder.tv_content.setText(list.get(position).getContent());
+        holder.tv_date.setText(list.get(position).getDate());
 
-        //bind data to viewholder
-//        holder.tvCode.setText(tt.getIdNews());
-        holder.tvTitle.setText(tt.getContent());
-        holder.tvLyric.setText(tt.getTitle());
-        holder.tvArtist.setText(tt.getDate());
 
     }
 
     @Override
     public int getItemCount() {
-        return tintuc.size();
+        return list.size();
     }
-    class TinTucViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvCode;
-        private TextView tvTitle;
-        private TextView tvLyric;
-        private TextView tvArtist;
 
-        public TinTucViewHolder(View itemView) {
+    public  class  ViewHolder extends RecyclerView.ViewHolder{
+        TextView tv_title,tv_content,tv_date;
+        ImageView imghinh;
+
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-//            tvCode = (TextView) itemView.findViewById(R.id.tv_code);
-            tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
-            tvLyric = (TextView) itemView.findViewById(R.id.tv_lyric);
-            tvArtist = (TextView) itemView.findViewById(R.id.tv_artist);
+            tv_title=itemView.findViewById(R.id.tv_title);
+            tv_content=itemView.findViewById(R.id.tv_content);
+            tv_date=itemView.findViewById(R.id.tv_date);
+            imghinh=itemView.findViewById(R.id.imghinh);
+
         }
     }
+
 }

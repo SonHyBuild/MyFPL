@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new CoursesFragment());
                     break;
                 case R.id.notification:
-                    replaceFragment(new NotificationsFragment());
+                    replaceFragment(new ThongBaoFragment());
                     break;
             }
 
