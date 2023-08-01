@@ -38,27 +38,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        replaceFragment(new XuongFragment());
+        replaceFragment(new TabFragment());
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
                     replaceFragment(new XuongFragment());
                     break;
                 case R.id.course:
-<<<<<<< HEAD
                     replaceFragment(new CoursesFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new FormFragment());
-=======
                     replaceFragment(new TabFragment());
-                    break;
-                case R.id.profile:
-                    replaceFragment(new CoursesFragment());
                     break;
                 case R.id.notification:
                     replaceFragment(new NotificationsFragment());
->>>>>>> master
                     break;
             }
 
