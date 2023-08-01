@@ -11,11 +11,14 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.example.myfpl.activity.FormFragment;
+
 import com.example.myfpl.activity.XuongFragment;
-import com.example.myfpl.adapter.LoaiNhaAdapter;
+
+
+
 import com.example.myfpl.fragment.CoursesFragment;
 import com.example.myfpl.fragment.NotificationsFragment;
+import com.example.myfpl.fragment.TabFragment;
 import com.example.myfpl.fragment.ThongBaoFragment;
 import com.example.myfpl.model.LoaiNha;
 import com.example.myfpl.services.APIService;
@@ -38,20 +41,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        replaceFragment(new XuongFragment());
+        replaceFragment(new TabFragment());
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
                     replaceFragment(new XuongFragment());
                     break;
                 case R.id.course:
-                    replaceFragment(new XuongFragment());
+                    replaceFragment(new NotificationsFragment());
                     break;
                 case R.id.profile:
                     replaceFragment(new CoursesFragment());
                     break;
                 case R.id.notification:
-                    replaceFragment(new ThongBaoFragment());
+                    replaceFragment(new TabFragment());
                     break;
             }
 
