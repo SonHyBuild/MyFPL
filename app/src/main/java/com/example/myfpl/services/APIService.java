@@ -14,8 +14,10 @@ import retrofit2.http.Query;
 public interface APIService {
     // api get list
     //http://localhost/API_MYFPL/api/GetList.php
+
     String base_link="http://172.16.79.4/API_MYFPL/api/";
 
+    
 
     //lay ds lich hoc
     @GET("LichHoc.php")
