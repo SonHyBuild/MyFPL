@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFBF69"
-    tools:context=".fragment.LichThiFragment">
+    tools:context=".activity.LichThiFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLichThi"

@@ -15,15 +15,18 @@ public interface APIService {
     // api get list
     //http://localhost/API_MYFPL/api/GetList.php
 
+
     //http://localhost/API_MYFPL/api/GetList.php
 //    String base_link="http://192.168.101.47/apithuyen/api/";
 
     String base_link="http://192.168.1.10/API_MYFPL/api/";
 
+
     @GET("GetList.php")
     Call<ArrayList<LoaiNha>> GetDS();
     @GET("Detail.php")
     Call<LoaiNha> GetDetails(@Query("id") int id);
+
 
     @GET("GetTinTuc.php")
     Call<ArrayList<TinTuc>> GetDSTT();
@@ -35,5 +38,13 @@ public interface APIService {
     //lay ds lich thi
     @GET("LichThi.php")
     Call<ArrayList<LichThi>> GetDSLT();
+
+    // get ds tin tức
+//    @GET("GetTinTuc.php")
+//    Call<ArrayList<TinTuc>> GetDSTT();
+
+
+
+
 
 }

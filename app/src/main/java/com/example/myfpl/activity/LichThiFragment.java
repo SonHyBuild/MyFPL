@@ -1,4 +1,4 @@
-package com.example.myfpl.fragment;
+package com.example.myfpl.activity;
 
 import android.os.Bundle;
 
@@ -14,9 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.myfpl.R;
-import com.example.myfpl.adapter.CoursesAdapter;
-import com.example.myfpl.adapter.LichHocAdapter;
-import com.example.myfpl.model.LichHoc;
+import com.example.myfpl.adapter.LichThiAdapter;
+import com.example.myfpl.model.LichThi;
 import com.example.myfpl.services.APIService;
 
 import java.util.ArrayList;
@@ -28,14 +27,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class LichHocFragment extends Fragment {
-    private  RecyclerView recyclerViewLichHoc ;
-    public LichHocFragment() {
+public class LichThiFragment extends Fragment {
+
+    private RecyclerView recyclerViewLichThi;
+    public LichThiFragment() {
         // Required empty public constructor
     }
 
-    public static LichHocFragment newInstance(String param1, String param2) {
-        LichHocFragment fragment = new LichHocFragment();
+    public static LichThiFragment newInstance(String param1, String param2) {
+        LichThiFragment fragment = new LichThiFragment();
         Bundle args = new Bundle();
 
         fragment.setArguments(args);
@@ -53,35 +53,35 @@ public class LichHocFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lich_hoc, container, false);
+        return inflater.inflate(R.layout.fragment_lich_thi, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerViewLichHoc = view.findViewById(R.id.recyclerViewLichHoc);
+        recyclerViewLichThi = view.findViewById(R.id.recyclerViewLichThi);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIService.base_link)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         APIService service = retrofit.create(APIService.class);
-        Call<ArrayList<LichHoc>> response = service.GetDSLH();
-        response.enqueue(new Callback<ArrayList<LichHoc>>() {
+        Call<ArrayList<LichThi>> response = service.GetDSLT();
+        response.enqueue(new Callback<ArrayList<LichThi>>() {
             @Override
-            public void onResponse(Call<ArrayList<LichHoc>> call, Response<ArrayList<LichHoc>> response) {
-                ArrayList<LichHoc> list = response.body();
+            public void onResponse(Call<ArrayList<LichThi>> call, Response<ArrayList<LichThi>> response) {
+                ArrayList<LichThi> list = response.body();
 
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-                recyclerViewLichHoc.setLayoutManager(linearLayoutManager);
-                LichHocAdapter adapter= new LichHocAdapter(getContext(), list);
-                recyclerViewLichHoc.setAdapter(adapter);
+                recyclerViewLichThi.setLayoutManager(linearLayoutManager);
+                LichThiAdapter adapter= new LichThiAdapter(getContext(), list);
+                recyclerViewLichThi.setAdapter(adapter);
 
                 Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(Call<ArrayList<LichHoc>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<LichThi>> call, Throwable t) {
                 Toast.makeText(getContext(), "Không thành công", Toast.LENGTH_SHORT).show();
             }
         });

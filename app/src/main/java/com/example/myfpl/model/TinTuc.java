@@ -52,3 +52,4 @@ public class TinTuc {
         this.hinh = hinh;
     }
 }
+

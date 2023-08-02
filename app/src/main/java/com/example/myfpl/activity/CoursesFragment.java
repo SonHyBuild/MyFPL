@@ -1,4 +1,4 @@
-package com.example.myfpl.fragment;
+package com.example.myfpl.activity;
 
 import android.os.Bundle;
 

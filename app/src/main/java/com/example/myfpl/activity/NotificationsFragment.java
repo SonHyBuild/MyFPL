@@ -1,4 +1,4 @@
-package com.example.myfpl.fragment;
+package com.example.myfpl.activity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfpl.R;
-import com.example.myfpl.adapter.CoursesAdapter;
 import com.example.myfpl.adapter.NotificationsAdapter;
 
 public class NotificationsFragment extends Fragment {

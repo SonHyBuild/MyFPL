@@ -1,4 +1,4 @@
-package com.example.myfpl.fragment;
+package com.example.myfpl.activity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.myfpl.R;
+import com.example.myfpl.activity.LichHocFragment;
+import com.example.myfpl.activity.LichThiFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class TabFragment extends Fragment {

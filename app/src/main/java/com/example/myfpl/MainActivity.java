@@ -4,34 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
-import android.widget.Toast;
+
 
 import com.example.myfpl.activity.FormFragment;
+
 import com.example.myfpl.activity.XuongFragment;
 import com.example.myfpl.adapter.LoaiNhaAdapter;
-import com.example.myfpl.fragment.CoursesFragment;
-import com.example.myfpl.fragment.NotificationsFragment;
 
-import com.example.myfpl.fragment.ThongBaoFragment;
-
-import com.example.myfpl.fragment.TabFragment;
 
 import com.example.myfpl.model.LoaiNha;
 import com.example.myfpl.services.APIService;
+
+import com.example.myfpl.activity.CoursesFragment;
+import com.example.myfpl.activity.ThongBaoFragment;
+
+
+
+
+import com.example.myfpl.activity.TabFragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -46,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new XuongFragment());
+                    replaceFragment(new TabFragment());
                     break;
                 case R.id.course:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new FormFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new TabFragment());
+                    replaceFragment(new CoursesFragment());
                     break;
                 case R.id.notification:
                     replaceFragment(new ThongBaoFragment());
@@ -96,3 +91,4 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 }
+

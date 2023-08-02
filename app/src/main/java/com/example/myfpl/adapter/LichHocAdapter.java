@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfpl.R;
-import com.example.myfpl.fragment.LichHocFragment;
 import com.example.myfpl.model.LichHoc;
 
 import java.util.ArrayList;
