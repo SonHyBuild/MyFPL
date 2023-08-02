@@ -1,7 +1,32 @@
 package com.example.myfpl.model;
 
 public class Course {
-    private String doiTuong,thoiGian,moTa;
+   private int idKhoa;
+   private String tenKhoa,doiTuong,thoiGian,moTa;
+
+    public Course(int idKhoa, String tenKhoa, String doiTuong, String thoiGian, String moTa) {
+        this.idKhoa = idKhoa;
+        this.tenKhoa = tenKhoa;
+        this.doiTuong = doiTuong;
+        this.thoiGian = thoiGian;
+        this.moTa = moTa;
+    }
+
+    public int getIdKhoa() {
+        return idKhoa;
+    }
+
+    public void setIdKhoa(int idKhoa) {
+        this.idKhoa = idKhoa;
+    }
+
+    public String getTenKhoa() {
+        return tenKhoa;
+    }
+
+    public void setTenKhoa(String tenKhoa) {
+        this.tenKhoa = tenKhoa;
+    }
 
     public String getDoiTuong() {
         return doiTuong;
@@ -24,12 +49,6 @@ public class Course {
     }
 
     public void setMoTa(String moTa) {
-        this.moTa = moTa;
-    }
-
-    public Course(String doiTuong, String thoiGian, String moTa) {
-        this.doiTuong = doiTuong;
-        this.thoiGian = thoiGian;
         this.moTa = moTa;
     }
 }

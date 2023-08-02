@@ -40,7 +40,7 @@ public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tv_title.setText(list.get(position).getTitle());
-        holder.tv_content.setText(list.get(position).getContent());
+//        holder.tv_content.setText(list.get(position).getContent());
         holder.tv_date.setText(list.get(position).getDate());
 
 
@@ -58,7 +58,7 @@ public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.ViewHo
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_title=itemView.findViewById(R.id.tv_title);
-            tv_content=itemView.findViewById(R.id.tv_content);
+//            tv_content=itemView.findViewById(R.id.tv_content);
             tv_date=itemView.findViewById(R.id.tv_date);
             imghinh=itemView.findViewById(R.id.imghinh);
 
