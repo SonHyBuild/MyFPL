@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECE9E6">
+    android:background="#ECE9E6"
+    >
 
 
     <androidx.cardview.widget.CardView
@@ -175,3 +176,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
