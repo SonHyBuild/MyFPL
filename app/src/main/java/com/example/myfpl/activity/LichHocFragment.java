@@ -76,7 +76,7 @@ public class LichHocFragment extends Fragment {
                 LichHocAdapter adapter= new LichHocAdapter(getContext(), list);
                 recyclerViewLichHoc.setAdapter(adapter);
 
-                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
