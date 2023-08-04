@@ -15,11 +15,11 @@ public interface APIService {
     // api get list
     //http://localhost/API_MYFPL/api/GetList.php
 
-
+    //http://localhost/API_MYFPL/api/GetTinTuc.php
     //http://localhost/API_MYFPL/api/GetList.php
-//    String base_link="http://192.168.101.47/apithuyen/api/";
+//    String base_link="http://192.168.0.101/apithuyen/api/";
 
-    String base_link="http://192.168.1.10/API_MYFPL/api/";
+    String base_link="http://192.168.0.101/API_MYFPL/api/";
 
 
     @GET("GetList.php")
@@ -28,10 +28,10 @@ public interface APIService {
     Call<LoaiNha> GetDetails(@Query("id") int id);
 
 
-    @GET("GetTinTuc.php")
-    Call<ArrayList<TinTuc>> GetDSTT();
+//    @GET("News.php")
+//    Call<ArrayList<TinTuc>> GetDSTT();
 
-    //lay ds lich hoc
+//    lay ds lich hoc
     @GET("LichHoc.php")
     Call<ArrayList<LichHoc>> GetDSLH();
 
@@ -40,8 +40,11 @@ public interface APIService {
     Call<ArrayList<LichThi>> GetDSLT();
 
     // get ds tin tức
-//    @GET("GetTinTuc.php")
-//    Call<ArrayList<TinTuc>> GetDSTT();
+    @GET("GetTinTuc.php")
+    Call<ArrayList<TinTuc>> GetDSTT();
+
+    @GET("DetailNews.php")
+    Call<TinTuc> GetDetailTT(@Query("idNews") int idNews);
 
 
 
