@@ -17,9 +17,9 @@ public interface APIService {
 
     //http://localhost/API_MYFPL/api/GetTinTuc.php
     //http://localhost/API_MYFPL/api/GetList.php
-//    String base_link="http://192.168.0.101/apithuyen/api/";
+    String base_link="http://192.168.0.101/apithuyen/api/";
 
-    String base_link="http://192.168.0.101/API_MYFPL/api/";
+//    String base_link="http://192.168.0.101/API_MYFPL/api/";
 
 
     @GET("GetList.php")
