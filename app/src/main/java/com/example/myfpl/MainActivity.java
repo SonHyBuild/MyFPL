@@ -10,6 +10,14 @@ import android.widget.FrameLayout;
 
 
 import com.example.myfpl.activity.FormFragment;
+
+import com.example.myfpl.activity.XuongFragment;
+import com.example.myfpl.adapter.LoaiNhaAdapter;
+
+
+import com.example.myfpl.model.LoaiNha;
+import com.example.myfpl.services.APIService;
+
 import com.example.myfpl.activity.CoursesFragment;
 import com.example.myfpl.activity.ThongBaoFragment;
 
@@ -17,6 +25,7 @@ import com.example.myfpl.activity.ThongBaoFragment;
 
 
 import com.example.myfpl.activity.TabFragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

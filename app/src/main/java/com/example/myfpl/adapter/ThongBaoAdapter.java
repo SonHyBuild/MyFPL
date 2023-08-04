@@ -2,17 +2,25 @@ package com.example.myfpl.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 //import com.example.myfpl.Fragment.ThongBaoFragment;
+import com.example.myfpl.MainActivity;
 import com.example.myfpl.R;
+import com.example.myfpl.activity.DetailThongBaoActivity;
+import com.example.myfpl.activity.DetailThongBaoFragment;
+import com.example.myfpl.activity.LoginActivity;
 import com.example.myfpl.model.TinTuc;
 //import com.example.myfpl.model.TinTuc;
 
@@ -42,6 +50,17 @@ public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.ViewHo
         holder.tv_title.setText(list.get(position).getTitle());
 //        holder.tv_content.setText(list.get(position).getContent());
         holder.tv_date.setText(list.get(position).getDate());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("idNews",list.get(holder.getAdapterPosition()).getIdNews());
+                Intent intent= new Intent(context, DetailThongBaoActivity.class);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
 
 
     }
