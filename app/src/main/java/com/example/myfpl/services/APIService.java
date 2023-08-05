@@ -15,7 +15,7 @@ public interface APIService {
     // api get list
     //http://localhost/API_MYFPL/api/GetList.php
 
-    String base_link="http://172.16.79.4/API_MYFPL/api/";
+    String base_link="http://192.168.1.10/API_MYFPL/api/";
 
     
 
