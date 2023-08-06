@@ -8,22 +8,23 @@
     android:layout_marginRight="6dp"
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="8dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="3dp"
+        android:layout_height="match_parent"
         android:paddingLeft="6dp"
+        android:paddingTop="3dp"
         android:paddingRight="6dp"
-        android:paddingTop="3dp">
+        android:paddingBottom="3dp">
 
 
         <LinearLayout
             android:id="@+id/line1"
             android:layout_width="300dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="3dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="2dp"
             android:orientation="vertical">
 
             <TextView
@@ -49,23 +50,24 @@
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#7f8c8d"
                 android:text="bbbb"
+                android:textColor="#7f8c8d"
                 android:textSize="14dp" />
         </LinearLayout>
 
         <FrameLayout
             android:id="@+id/fl_code"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/line1"
-            android:layout_centerVertical="true">
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/line1">
 
-       <ImageView
-           android:id="@+id/imghinh"
-           android:layout_width="100dp"
-           android:layout_height="100dp"
-           android:src="@drawable/bee"></ImageView>
+            <ImageView
+
+                android:id="@+id/imghinh"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/bee"></ImageView>
         </FrameLayout>
     </RelativeLayout>
 

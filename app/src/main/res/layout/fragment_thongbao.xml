@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     android:background="#FFBF69"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/txtTT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Thông Báo"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold">
 
-<!--    <EditText-->
-<!--        android:id="@+id/edtSearch"-->
-<!--        android:layout_width="330dp"-->
-<!--        android:layout_height="45dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:background="@drawable/edtform"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        android:drawableLeft="@drawable/search"-->
-<!--        android:ems="10"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:inputType="textEmailAddress"-->
-<!--        android:paddingLeft="8dp"-->
-<!--        android:textColor="@color/black" />-->
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/thongbao"
-        android:background="#FFBF69"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTT">
 
     </androidx.recyclerview.widget.RecyclerView>
 
