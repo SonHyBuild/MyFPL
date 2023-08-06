@@ -56,10 +56,16 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        app:tabGravity="fill"
+        
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="20dp"
+        app:tabIndicatorGravity="stretch"
         app:tabMode="fixed"
         android:background="#FFBF69"
-        app:tabIndicatorColor="#ff0000"
+        app:tabIndicatorColor="@null"
+        app:tabIndicator="@drawable/tab_indicator"
         app:tabSelectedTextColor="#ff0000"
         app:tabTextColor="#ffffff"
         android:layout_width="match_parent"
