@@ -1,6 +1,7 @@
 package com.example.myfpl.services;
 
 import com.example.myfpl.model.Course;
+import com.example.myfpl.model.InforCourse;
 import com.example.myfpl.model.LichHoc;
 import com.example.myfpl.model.LichThi;
 import com.example.myfpl.model.TinTuc;
@@ -8,7 +9,11 @@ import com.example.myfpl.model.TinTuc;
 import java.util.ArrayList;
 
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface APIService {
@@ -16,7 +21,7 @@ public interface APIService {
     //http://localhost/API_MYFPL/api/GetList.php
 
 
-    String base_link="http://172.16.79.4/API_MYFPL/api/";
+    String base_link="http://192.168.2.5/API_MYFPL/api/";
 
 
 
@@ -40,12 +45,12 @@ public interface APIService {
     Call<ArrayList<Course>> GetDSCourse();
 
 
-    @GET("DetailNews.php")
+    @GET("Detail.php")
     Call<TinTuc> GetDetailTT(@Query("idNews") int idNews);
-
-
-
-
-
-
+    @FormUrlEncoded
+    @Headers("Accept: application/json")
+    @POST("AddForm.php")
+    Call<InforCourse> addForm(@Field("email") String email,@Field("name") String name,
+                              @Field("phoneNumber") String phoneNumber,
+                              @Field("MSSV")String MSSV,@Field("subject")String subject);
 }

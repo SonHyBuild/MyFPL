@@ -12,10 +12,7 @@ import android.widget.FrameLayout;
 import com.example.myfpl.activity.FormFragment;
 
 import com.example.myfpl.activity.XuongFragment;
-import com.example.myfpl.adapter.LoaiNhaAdapter;
 
-
-import com.example.myfpl.model.LoaiNha;
 import com.example.myfpl.services.APIService;
 
 import com.example.myfpl.activity.CoursesFragment;

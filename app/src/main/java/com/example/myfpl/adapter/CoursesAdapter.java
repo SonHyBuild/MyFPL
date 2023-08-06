@@ -40,14 +40,14 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.txtCourse.setText(list.get(position).getTenKhoa());
-        holder.txtTime.setText(list.get(position).getThoiGian());
-        holder.txtObject.setText(list.get(position).getDoiTuong());
-        holder.txtMoTa.setText(list.get(position).getMoTa());
+        holder.txtTime.setText("Thời gian: "+list.get(position).getThoiGian());
+        holder.txtObject.setText("Đối tượng: "+list.get(position).getDoiTuong());
+        holder.txtMoTa.setText("Mô tả: "+list.get(position).getMoTa());
         holder.regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, FormActivity.class);
-                i.putExtra("id",list.get(holder.getAdapterPosition()).getIdKhoa());
+                i.putExtra("nameCourse",list.get(holder.getAdapterPosition()).getTenKhoa());
                 context.startActivity(i);
             }
         });
