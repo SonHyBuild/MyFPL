@@ -17,6 +17,7 @@ import com.example.myfpl.activity.XuongFragment;
 import com.example.myfpl.services.APIService;
 
 import com.example.myfpl.activity.CoursesFragment;
+import com.example.myfpl.activity.HomeFragment;
 import com.example.myfpl.activity.ThongBaoFragment;
 
 
@@ -39,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.course:
-                    replaceFragment(new ThongBaoFragment());
-                    break;
-                case R.id.profile:
                     replaceFragment(new TabFragment());
                     break;
+                case R.id.profile:
+                    replaceFragment(new ThongBaoFragment());
+                    break;
                 case R.id.notification:
-                    replaceFragment(new LichHocFragment());
+                    replaceFragment(new CoursesFragment());
                     break;
             }
 
