@@ -4,7 +4,11 @@
     <gradient android:startColor="@color/white"
         android:endColor="@color/white"
         android:angle="270" />
-    <corners android:radius="60dp"/>
+    <stroke
+        android:width="1px"
+        android:color="#FF7A00"/>
+    <corners android:radius="60dp" />
+
 
 
 

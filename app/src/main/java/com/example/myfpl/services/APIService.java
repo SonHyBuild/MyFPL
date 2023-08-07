@@ -23,7 +23,7 @@ public interface APIService {
 
 
 
-    String base_link="http://192.168.2.5/API_MYFPL/api/";
+    String base_link="http://192.168.1.10/API_MYFPL/api/";
 
 
 
