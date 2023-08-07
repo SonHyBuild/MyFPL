@@ -26,25 +26,25 @@ import com.example.myfpl.activity.TabFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    BottomNavigationView bottomNavigationView;
+    BottomNavigationView bottomNavigationView,bottomNavigationView2;
     FrameLayout frameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_botomtab);
         frameLayout = findViewById(R.id.frameLayout);
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView2);
         replaceFragment(new TabFragment());
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new TabFragment());
+                    replaceFragment(new ThongBaoFragment());
                     break;
                 case R.id.course:
-                    replaceFragment(new FormFragment());
+                    replaceFragment(new ThongBaoFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new ThongBaoFragment());
                     break;
                 case R.id.notification:
                     replaceFragment(new ThongBaoFragment());
