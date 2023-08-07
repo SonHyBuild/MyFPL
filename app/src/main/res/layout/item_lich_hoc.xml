@@ -17,6 +17,7 @@
             android:layout_width="10dp"
             android:layout_height="match_parent"/>
         <LinearLayout
+            android:id="@+id/btnShow"
             android:layout_weight="9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -56,42 +57,58 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"/>
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/layoutShow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_tearcher" />
-
-                <TextView
-                    android:id="@+id/txtTearcherMH"
-                    android:layout_width="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:text="dinhnt24" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_date" />
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_tearcher" />
 
-                <TextView
-                    android:id="@+id/txtDate_timeLH"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="2dp"
-                    android:text="Thứ Tư, 19/07/2023 19:30:00 - 21:30:00" />
+                    <TextView
+                        android:id="@+id/txtTearcherMH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="dinhnt24"/>
+                    <TextView
+                        android:id="@+id/txtLopLH"
+                        android:text="Lớp: MD17307"
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_date" />
+
+                    <TextView
+                        android:id="@+id/txtDate_timeLH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="2dp"
+                        android:text="Thứ Tư, 19/07/2023 19:30:00 - 21:30:00" />
+                </LinearLayout>
+
             </LinearLayout>
+
+
 
 
         </LinearLayout>

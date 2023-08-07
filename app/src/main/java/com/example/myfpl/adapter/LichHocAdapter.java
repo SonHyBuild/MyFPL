@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,6 +41,20 @@ public class LichHocAdapter extends RecyclerView.Adapter<LichHocAdapter.ViewHold
         holder.txtLocationLH.setText(list.get(position).getLocationLH());
         holder.txtCaLH.setText(list.get(position).getCaLH());
         holder.txtDate_timeLH.setText(list.get(position).getDate_timeLH());
+        holder.txtLopLH.setText("Lớp: MD17307");
+        holder.layoutShow.setVisibility(View.GONE);
+        holder.btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int isvisible = holder.layoutShow.getVisibility();
+                if(isvisible==View.VISIBLE){
+                    holder.layoutShow.setVisibility(View.GONE);
+                }
+                else {
+                    holder.layoutShow.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     @Override
@@ -48,7 +63,8 @@ public class LichHocAdapter extends RecyclerView.Adapter<LichHocAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtNameMH,txtTearcherMH,txtLocationLH,txtCaLH,txtDate_timeLH;
+        TextView txtNameMH,txtTearcherMH,txtLocationLH,txtCaLH,txtDate_timeLH, txtLopLH;
+        LinearLayout btnShow, layoutShow;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtNameMH = itemView.findViewById(R.id.txtNameMH);
@@ -56,6 +72,10 @@ public class LichHocAdapter extends RecyclerView.Adapter<LichHocAdapter.ViewHold
             txtLocationLH = itemView.findViewById(R.id.txtLocationLH);
             txtCaLH = itemView.findViewById(R.id.txtCaLH);
             txtDate_timeLH = itemView.findViewById(R.id.txtDate_timeLH);
+            txtLopLH = itemView.findViewById(R.id.txtLopLH);
+            btnShow = itemView.findViewById(R.id.btnShow);
+            layoutShow = itemView.findViewById(R.id.layoutShow);
+
         }
     }
 }

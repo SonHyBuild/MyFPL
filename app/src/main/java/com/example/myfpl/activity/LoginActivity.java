@@ -12,21 +12,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.myfpl.MainActivity;
 import com.example.myfpl.R;
+import com.example.myfpl.model.User;
 import com.example.myfpl.model.UserGG;
+import com.example.myfpl.services.APIService;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,10 +35,17 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class LoginActivity extends AppCompatActivity {
 
     private Button btnLogin;
     private  ImageButton imggg;
+    private EditText edtEmail, edtPassword ;
     FirebaseAuth auth;
     FirebaseDatabase database;
     GoogleSignInClient mGoogleSignInClient;
@@ -48,6 +56,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         btnLogin = findViewById(R.id.btnLogin);
         imggg=findViewById(R.id.imageButton);
+        edtEmail=findViewById(R.id.edtEmail);
+        edtPassword=findViewById(R.id.edtPassword);
         auth=FirebaseAuth.getInstance();
         database=FirebaseDatabase.getInstance();
         progressDialog=new ProgressDialog(LoginActivity.this);
@@ -64,8 +74,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new  Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
+//                Intent i = new  Intent(LoginActivity.this, MainActivity.class);
+//                startActivity(i);
+                goLogin();
             }
         });
         imggg.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                 singIn();
             }
         });
+
     }
 
     int RC_SIGN_IN= 40;
@@ -81,7 +93,38 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent= mGoogleSignInClient.getSignInIntent();
         startActivityForResult(intent,RC_SIGN_IN);
     }
+    public void goLogin(){
+        String email = edtEmail.getText().toString();
+        String password = edtPassword.getText().toString();
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(APIService.base_link)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        APIService service = retrofit.create(APIService.class);
+        Call<Void> response = service.Login(email,password);
+
+       response.enqueue(new Callback<Void>() {
+           @Override
+           public void onResponse(Call<Void> call, Response<Void> response) {
+               if(response.isSuccessful()){
+                   Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                   startActivity(intent);
+                   finish();
+
+               }else {
+                   Toast.makeText(LoginActivity.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+               }
+
+           }
+
+           @Override
+           public void onFailure(Call<Void> call, Throwable t) {
+               Toast.makeText(LoginActivity.this, "Login API Fail", Toast.LENGTH_SHORT).show();
+           }
+       });
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
