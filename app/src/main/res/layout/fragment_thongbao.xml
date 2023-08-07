@@ -3,20 +3,54 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
     android:background="#FFBF69"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+     >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Thông báo"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/people">
+
+        </ImageView>
+
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/txtTT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="402dp"
+        android:layout_height="56dp"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="50dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Thông Báo"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold">
@@ -26,8 +60,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/thongbao"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/txtTT">
+        android:layout_height="606dp"
+        android:layout_below="@+id/txtTT"
+        android:layout_marginTop="9dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

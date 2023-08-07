@@ -35,17 +35,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_botomtab);
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView2);
-        replaceFragment(new TabFragment());
+        replaceFragment(new CoursesFragment());
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new TabFragment());
+                    replaceFragment(new CoursesFragment());
                     break;
                 case R.id.course:
                     replaceFragment(new ThongBaoFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new TabFragment());
                     break;
                 case R.id.notification:
                     replaceFragment(new LichHocFragment());
