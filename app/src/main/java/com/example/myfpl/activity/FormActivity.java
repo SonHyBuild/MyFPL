@@ -42,6 +42,7 @@ public class FormActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         String nameCourse = i.getStringExtra("nameCourse");
+
         subject.setText(nameCourse);
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +71,7 @@ public class FormActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<InforCourse> call, Throwable t) {
-                Toast.makeText(FormActivity.this, "Đăng kí thất bại: "+t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(FormActivity.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
                 Log.d(">>>>", "onFailure: "+t);
                 Intent i = new Intent(FormActivity.this, MainActivity.class);
                 startActivity(i);
