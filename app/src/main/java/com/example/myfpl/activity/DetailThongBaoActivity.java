@@ -32,19 +32,21 @@ public class DetailThongBaoActivity extends AppCompatActivity {
         title=findViewById(R.id.title);
         date=findViewById(R.id.date2);
         content=findViewById(R.id.content2);
-
-        Bundle bundle = getIntent().getExtras();
-        int idNews= bundle.getInt("idNews");
-        Toast.makeText(this, "aaa"+idNews, Toast.LENGTH_SHORT).show();
-
-
+        Intent i = getIntent();
+        int id= i.getIntExtra("id",0);
+        Toast.makeText(this, "id: "+id, Toast.LENGTH_SHORT).show();
+//        Bundle bundle = getIntent().getExtras();
+//        int idNews= bundle.getInt("idNews");
+//        Toast.makeText(this, "aaa"+idNews, Toast.LENGTH_SHORT).show();
+//
+//
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIService.base_link)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         APIService service = retrofit.create(APIService.class);
-        Call<TinTuc> response=service.GetDetailTT(idNews);
+        Call<TinTuc> response=service.GetDetailTT(id);
         response.enqueue(new Callback<TinTuc>() {
             @Override
             public void onResponse(Call<TinTuc> call, Response<TinTuc> response) {

@@ -11,15 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đăng kí"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -40,7 +40,7 @@
         android:layout_marginBottom="548dp"
         android:background="@drawable/edtform"
         android:ems="10"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:paddingLeft="8dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,15 +52,15 @@
         android:id="@+id/tvEmailForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="sans-serif-light"
-        android:text="Email :"
+        android:text="Email (Đuôi fpt.edu.vn) :"
         android:textColor="@color/black"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/edtEmailForm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -100,7 +100,8 @@
         android:layout_marginBottom="372dp"
         android:background="@drawable/edtform"
         android:ems="10"
-        android:inputType="phone"
+        android:inputType="text"
+
         android:paddingLeft="8dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,7 +131,8 @@
         android:layout_marginBottom="288dp"
         android:background="@drawable/edtform"
         android:ems="10"
-        android:inputType="phone"
+        android:inputType="text"
+
         android:paddingLeft="8dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -154,14 +156,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/edtMForm"
+        android:id="@+id/edtSubject"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:layout_marginBottom="200dp"
         android:background="@drawable/edtform"
         android:ems="10"
-        android:inputType="phone"
         android:paddingLeft="8dp"
+        android:inputType="text"
+
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,20 +177,20 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-light"
-        android:text="MSSV :"
+        android:text="Bộ môn :"
         android:textColor="@color/black"
         android:textSize="17dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edtMForm"
+        app:layout_constraintBottom_toTopOf="@+id/edtSubject"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRegisForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Đăng kí"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

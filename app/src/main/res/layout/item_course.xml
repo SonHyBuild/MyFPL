@@ -50,14 +50,14 @@
             android:layout_marginBottom="5dp"/>
         <TextView
             android:textSize="18dp"
-
+            android:id="@+id/txtMoTa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Không yêu cầu kinh nghiệm sẽ có người hướng dẫn cụ thể"/>
 
         <TextView
             android:textSize="18dp"
-
+            android:id="@+id/registerCourse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đăng ký ngay"

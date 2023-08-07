@@ -77,7 +77,7 @@ public class LichThiFragment extends Fragment {
                 LichThiAdapter adapter= new LichThiAdapter(getContext(), list);
                 recyclerViewLichThi.setAdapter(adapter);
 
-                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), "" + list.size(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -54,10 +54,10 @@ public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putInt("idNews",list.get(holder.getAdapterPosition()).getIdNews());
+                //Bundle bundle = new Bundle();
+                //bundle.putInt("idNews",list.get(holder.getAdapterPosition()).getIdNews());
                 Intent intent= new Intent(context, DetailThongBaoActivity.class);
-                intent.putExtras(bundle);
+                intent.putExtra("id",list.get(holder.getAdapterPosition()).getIdNews());
                 context.startActivity(intent);
             }
         });
@@ -77,7 +77,7 @@ public class ThongBaoAdapter extends RecyclerView.Adapter<ThongBaoAdapter.ViewHo
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_title=itemView.findViewById(R.id.tv_title);
-            tv_content=itemView.findViewById(R.id.tv_content);
+//            tv_content=itemView.findViewById(R.id.tv_content);
             tv_date=itemView.findViewById(R.id.tv_date);
             imghinh=itemView.findViewById(R.id.imghinh);
 
