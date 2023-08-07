@@ -59,7 +59,7 @@ public class ThongBaoFragment extends Fragment {
             @Override
             public void onResponse(Call<ArrayList<TinTuc>> call, Response<ArrayList<TinTuc>> response) {
                 list=response.body();
-                Toast.makeText(getContext(), "  thành công"+list, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "  thành công"+list, Toast.LENGTH_SHORT).show();
                 RecyclerView recyclerView=view.findViewById(R.id.thongbao);
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
                 recyclerView.setLayoutManager(linearLayoutManager);

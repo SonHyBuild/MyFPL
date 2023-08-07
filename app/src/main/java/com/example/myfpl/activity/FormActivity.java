@@ -42,7 +42,6 @@ public class FormActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         String nameCourse = i.getStringExtra("nameCourse");
-        Toast.makeText(this, "TÊN khóa: "+ nameCourse, Toast.LENGTH_SHORT).show();
         subject.setText(nameCourse);
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override

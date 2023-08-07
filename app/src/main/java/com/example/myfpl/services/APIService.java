@@ -43,7 +43,10 @@ public interface APIService {
 
     @GET("Course.php")
     Call<ArrayList<Course>> GetDSCourse();
-
+    @GET("CLB.php")
+    Call<ArrayList<Course>> GetDSCLB();
+    @GET("All.php")
+    Call<ArrayList<Course>> GetDSALL();
     @GET("Login.php")
     Call<Void> Login(
             @Query("email") String email,

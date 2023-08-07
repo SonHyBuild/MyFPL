@@ -34,7 +34,7 @@ public class DetailThongBaoActivity extends AppCompatActivity {
         content=findViewById(R.id.content2);
         Intent i = getIntent();
         int id= i.getIntExtra("id",0);
-        Toast.makeText(this, "id: "+id, Toast.LENGTH_SHORT).show();
+
 //        Bundle bundle = getIntent().getExtras();
 //        int idNews= bundle.getInt("idNews");
 //        Toast.makeText(this, "aaa"+idNews, Toast.LENGTH_SHORT).show();

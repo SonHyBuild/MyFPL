@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import com.example.myfpl.activity.FormFragment;
 
 import com.example.myfpl.activity.LichHocFragment;
+import com.example.myfpl.activity.TabFragment2;
 import com.example.myfpl.activity.XuongFragment;
 
 import com.example.myfpl.services.APIService;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_botomtab);
+        setContentView(R.layout.activity_main);
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView2);
         replaceFragment(new HomeFragment());
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new ThongBaoFragment());
                     break;
                 case R.id.notification:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new TabFragment2());
                     break;
             }
 
