@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 
 import com.example.myfpl.activity.FormFragment;
 
+import com.example.myfpl.activity.LichHocFragment;
 import com.example.myfpl.activity.XuongFragment;
 
 import com.example.myfpl.services.APIService;
@@ -38,47 +39,22 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new ThongBaoFragment());
+                    replaceFragment(new TabFragment());
                     break;
                 case R.id.course:
                     replaceFragment(new ThongBaoFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new ThongBaoFragment());
+                    replaceFragment(new CoursesFragment());
                     break;
                 case R.id.notification:
-                    replaceFragment(new ThongBaoFragment());
+                    replaceFragment(new LichHocFragment());
                     break;
             }
 
             return true;
         });
-        //anh xa
-        //RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(APIService.base_link)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//
-//        APIService service = retrofit.create(APIService.class);
-//        Call<ArrayList<LoaiNha>> response = service.GetDS();
-//        response.enqueue(new Callback<ArrayList<LoaiNha>>() {
-//            @Override
-//            public void onResponse(Call<ArrayList<LoaiNha>> call, Response<ArrayList<LoaiNha>> response) {
-//                ArrayList<LoaiNha> list = response.body();
-//                Toast.makeText(MainActivity.this, "size: "+ list.size(), Toast.LENGTH_SHORT).show();
-//                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this);
-//                recyclerView.setLayoutManager(linearLayoutManager);
-//                LoaiNhaAdapter loaiNhaAdapter = new LoaiNhaAdapter(list,MainActivity.this);
-//                recyclerView.setAdapter(loaiNhaAdapter);
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ArrayList<LoaiNha>> call, Throwable t) {
-//                Toast.makeText(MainActivity.this, "FailAPI", Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
     }
     private void replaceFragment(Fragment fragment){
