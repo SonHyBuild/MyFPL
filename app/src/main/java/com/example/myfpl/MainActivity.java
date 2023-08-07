@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new TabFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new ThongBaoFragment());
+                    replaceFragment(new TabFragment2());
                     break;
                 case R.id.notification:
-                    replaceFragment(new TabFragment2());
+                    replaceFragment(new ThongBaoFragment());
                     break;
             }
 

@@ -67,7 +67,8 @@
         app:tabIndicatorColor="@null"
         app:tabIndicator="@drawable/tab_indicator"
         app:tabSelectedTextColor="#ff0000"
-        app:tabTextColor="#ffffff"
+        app:tabTextColor="@color/black"
+        android:textDirection="firstStrong"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </com.google.android.material.tabs.TabLayout>
