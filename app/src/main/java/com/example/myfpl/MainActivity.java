@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
 
 import com.example.myfpl.activity.FormFragment;
 import com.example.myfpl.activity.CoursesFragment;
+import com.example.myfpl.activity.HomeFragment;
 import com.example.myfpl.activity.ThongBaoFragment;
 
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new FormFragment());
                     break;
                 case R.id.profile:
-                    replaceFragment(new CoursesFragment());
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.notification:
                     replaceFragment(new ThongBaoFragment());
